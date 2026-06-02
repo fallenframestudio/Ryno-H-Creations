@@ -1,0 +1,115 @@
+/* Premium Gallery Styling: Black, White, and Gold */
+:root {
+    --bg-color: #0a0a0a;       /* Deep, rich black */
+    --card-bg: #121212;        /* Slightly lighter black for art cards */
+    --text-main: #ffffff;      /* Crisp white */
+    --text-muted: #a0a0a0;     /* Soft gray for subtitles */
+    --gold: #d4af37;           /* Elegant metallic gold */
+    --gold-hover: #f3e5ab;     /* Bright gold for hover effects */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Elegant Header */
+header {
+    border-bottom: 1px solid #222;
+    padding: 2rem;
+    text-align: center;
+}
+
+header h1 {
+    color: var(--gold);
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin: 0 15px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+/* Gallery Grid */
+.gallery-container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.art-card {
+    background-color: var(--card-bg);
+    border: 1px solid #222;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.art-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+}
+
+.art-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-bottom: 1px solid #222;
+}
+
+.art-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.art-title {
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: 1px;
+}
+
+.art-price {
+    color: var(--gold);
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.inquire-btn {
+    display: inline-block;
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--gold);
+    padding: 0.6rem 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.inquire-btn:hover {
+    background: var(--gold);
+    color: var(--bg-color);
+}
